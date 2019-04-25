@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Github Page + Hexo next主题构建个人免费博客]]></title>
-    <url>%2F2019%2F04%2F25%2FGithub-Page-Hexo-next%E4%B8%BB%E9%A2%98%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>技术技巧</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[长跑和生活长跑]]></title>
-    <url>%2F2019%2F04%2F22%2F%E9%95%BF%E8%B7%91%E5%92%8C%E7%94%9F%E6%B4%BB%E9%95%BF%E8%B7%91%2F</url>
-    <content type="text"><![CDATA[Please enter the password to read the blog. Incorrect Password! No content to display! U2FsdGVkX19cBtovTzppmGWaF3XI4q4BgP/C0Klme1U=]]></content>
-      <categories>
-        <category>随想</category>
-      </categories>
-      <tags>
-        <tag>hide</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Markdown常用语法]]></title>
     <url>%2F2019%2F04%2F21%2FMarkdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%2F</url>
     <content type="text"><![CDATA[概述Markdown是一种轻量级标记语言，它允许我们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或者HTML）文档，所以它完全兼容HTML语法。它的宗旨是易读易用，所以，就是因为它的轻量化、易读易写特性，它适用性广泛，包括GitHub，各种笔记软件等，基本是一处学习，处处可用，太赚了。 段落段落区分Markdown里文字间相隔一个或以上的空行，就为不同的段落，其余的都是同一个段落。空行指的是行内什么都没有，或者只有空白符（空格或制表符）行尾两个空格以上换行 例： Markdown语法 我是第一段 我也是第一 段 我是第二段 效果 我是第一段 我也是第一 段 我是第二段 段落内字之间不管相隔多少个空格或者制表符（只要没相隔一个完整的空行），都当作一个段落。 首行缩进由于markdown语法主要考虑的是英文，所以对于中文的首行缩进并不太友好。当一段前加了四个空格或一个制表符以上时，整段会按照你输入的样子展示，相当于html里的 &lt;pre&gt; 标签,所以，例如首行缩进两个字符只能用html代码实现，使用两个 &amp;emsp; ，或者四个 &amp;ensp; （一定要带上英文的分号） 字体标题标准写法是#加上标题文字 Markdown语法： # 一级标题 ## 二级标题 字体效果加粗：文字左右用两个*号包起来 斜体：文字左右用一个*号包起来 加粗加斜体：文字左右用三个*号包起来 加删除线：文字左右用两个~号包起来 加下划线：用&lt;u&gt;标签实现 Markdown语法： **我要加粗** *我要变斜* ***我要又粗又斜*** ~~我被删了,呜呜呜~~ &lt;u&gt;我带下划线&lt;/u&gt; 效果： 我要加粗我要变斜我要又粗又斜我被删了,呜呜呜我带下划线 分割线在一行中用至少三个 - 、 * 或 _ 来建立一条分隔线，行内不能有其他东西，但可以在符号间插入空格。 Markdown语法： * * * *** --- - - - ___ _ _ _ 效果： 超链接[超链接名](超链接地址 “超链接title”)title可加可不加 Markdown语法： [百度](http://baidu.com) [二珂](https://files.cnblogs.com/files/cloudust/a.gif) 效果 百度二珂 引用单行引用在段落或其他内容前使用 &gt; 符号，就可以将这段内容标记为 ‘引用’ 的内容 &gt;我是被引用的 我是被引用的 多行引用&gt;如果仅在第一行使用, 后面相邻的行即使省略, 也会变成引用内容 如果仅在第一行使用,后面相邻的行即使省略,也会变成引用内容 嵌套引用&gt;也可以在引用中 &gt;&gt;使用嵌套的引用 也可以在引用中 使用嵌套的引用 ## 列表无序列表列表前 - + * 任何一种加空格 有序列表数字+.+空格（可以自动排序） Markdown语法： - www + aaa * zzz 1. aaa 3. ccc 2. bbb 效果 www aaa zzz aaa ccc bbb 嵌套列表1. 第一层 + 1-1 + 1-2 2. 无序列表和有序列表可以随意相互嵌套 1. 2-1 2. 2-2 第一层 1-1 1-2 无序列表和有序列表可以随意相互嵌套 2-1 2-2 表格默认左对齐 | 左对齐 | 中间居中 | 右对齐 | | :--- | :--: | ---: | | 1| 1 | 1 | | 1| 1| 1 | 效果： 左对齐 中间居中 右对齐 1 1 1 1 1 1 代码在代码前后增加 三个反单引号：```可指定语言行内代码两个` 转义可转义的字符 \ ` * _ {} [] () # + - . ! 如果需要避免文本中的符号被当做Markdown标示符而发生不必要的格式转化，可以在符号前加转义符号 \ 来避免。]]></content>
