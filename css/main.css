@@ -1834,7 +1834,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7dff29;
+  background: #a61d87;
 }
 .feed-link,
 .chat {
@@ -3035,7 +3035,7 @@ ul.breadcrumb li+li:last-child {
   }
 }
 body {
-  background: url("https://api.dujin.org/bing/1366.php");
+  background: url("https://open.saintic.com/api/bingPic/");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
