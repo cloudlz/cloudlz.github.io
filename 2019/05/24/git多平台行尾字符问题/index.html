@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="cloudust的博客">
 <meta property="og:description" content="某一次git add . ： $ git add . fatal: CRLF would be replaced by LF ...">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-24T14:51:37.883Z">
+<meta property="og:updated_time" content="2019-05-24T14:54:08.732Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git多平台行尾字符问题">
 <meta name="twitter:description" content="某一次git add . ： $ git add . fatal: CRLF would be replaced by LF ...">
@@ -412,7 +412,7 @@
                 
               
 
-              <time title="创建时间：2019-05-24 22:45:11 / 修改时间：22:51:37" itemprop="dateCreated datePublished" datetime="2019-05-24T22:45:11+08:00">2019-05-24</time>
+              <time title="创建时间：2019-05-24 22:45:11 / 修改时间：22:54:08" itemprop="dateCreated datePublished" datetime="2019-05-24T22:45:11+08:00">2019-05-24</time>
             
 
             
@@ -523,7 +523,7 @@ fatal: CRLF would be replaced by LF ...
 git config --global core.safecrlf true
 </code></pre></li>
 </ol>
-<h3 id="注"><a href="#注" class="headerlink" title="注"></a>注</h3><h3 id="AutoCRLF"><a href="#AutoCRLF" class="headerlink" title="AutoCRLF"></a>AutoCRLF</h3><p>提交时转换为LF，检出时转换为CRLF</p>
+<h3 id="注"><a href="#注" class="headerlink" title="[注]"></a>[注]</h3><h3 id="AutoCRLF"><a href="#AutoCRLF" class="headerlink" title="AutoCRLF"></a>AutoCRLF</h3><p>提交时转换为LF，检出时转换为CRLF</p>
 <pre><code>git config --global core.autocrlf true
 </code></pre><p> 提交时转换为LF，检出时不转换</p>
 <pre><code>git config --global core.autocrlf input
@@ -535,8 +535,7 @@ git config --global core.safecrlf true
 <pre><code>git config --global core.safecrlf false
 </code></pre><p>提交包含混合换行符的文件时给出警告</p>
 <pre><code>git config --global core.safecrlf warn
-</code></pre><p>常见一定是CRLF的文件：</p>
-<ol>
+</code></pre><h3 id="常见一定是CRLF的文件："><a href="#常见一定是CRLF的文件：" class="headerlink" title="常见一定是CRLF的文件："></a>常见一定是CRLF的文件：</h3><ol>
 <li>一些字体、图片文件，虽然是二进制文件，但是他们的格式可能是CRLF</li>
 <li>windows可执行文件bat</li>
 </ol>
@@ -800,15 +799,15 @@ git config --global core.safecrlf true
                     </li>
                   
                     <li>
-                      <a href="/categories/编程相关/" title="编程相关">编程相关</a>
-                    </li>
-                  
-                    <li>
                       <a href="/categories/一些问题/" title="一些问题">一些问题</a>
                     </li>
                   
                     <li>
                       <a href="/categories/随想/" title="随想">随想</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/categories/编程相关/" title="编程相关">编程相关</a>
                     </li>
                   
                 </ul>
@@ -836,7 +835,7 @@ git config --global core.safecrlf true
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#各个操作系统默认行尾字符格式"><span class="nav-number">1.</span> <span class="nav-text">各个操作系统默认行尾字符格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决办法"><span class="nav-number">2.</span> <span class="nav-text">解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-修改编辑器和git配置"><span class="nav-number">2.1.</span> <span class="nav-text">一. 修改编辑器和git配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注"><span class="nav-number">2.1.1.</span> <span class="nav-text">注</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AutoCRLF"><span class="nav-number">2.1.2.</span> <span class="nav-text">AutoCRLF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SafeCRLF"><span class="nav-number">2.1.3.</span> <span class="nav-text">SafeCRLF</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-项目根目录创建gitattributes文件（但是好像很多项目中不用，可能拥有代码规范和审查吧）"><span class="nav-number">2.2.</span> <span class="nav-text">二. 项目根目录创建gitattributes文件（但是好像很多项目中不用，可能拥有代码规范和审查吧）</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#各个操作系统默认行尾字符格式"><span class="nav-number">1.</span> <span class="nav-text">各个操作系统默认行尾字符格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决办法"><span class="nav-number">2.</span> <span class="nav-text">解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-修改编辑器和git配置"><span class="nav-number">2.1.</span> <span class="nav-text">一. 修改编辑器和git配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注"><span class="nav-number">2.1.1.</span> <span class="nav-text">[注]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AutoCRLF"><span class="nav-number">2.1.2.</span> <span class="nav-text">AutoCRLF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SafeCRLF"><span class="nav-number">2.1.3.</span> <span class="nav-text">SafeCRLF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见一定是CRLF的文件："><span class="nav-number">2.1.4.</span> <span class="nav-text">常见一定是CRLF的文件：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-项目根目录创建gitattributes文件（但是好像很多项目中不用，可能拥有代码规范和审查吧）"><span class="nav-number">2.2.</span> <span class="nav-text">二. 项目根目录创建gitattributes文件（但是好像很多项目中不用，可能拥有代码规范和审查吧）</span></a></li></ol></li></ol></div>
             
 
           </div>
