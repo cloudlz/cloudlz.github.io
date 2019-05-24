@@ -432,9 +432,13 @@
                 
               
 
-              <time title="创建时间：2019-05-24 22:45:11" itemprop="dateCreated datePublished" datetime="2019-05-24T22:45:11+08:00">2019-05-24</time>
+              <time title="创建时间：2019-05-24 22:45:11 / 修改时间：22:51:37" itemprop="dateCreated datePublished" datetime="2019-05-24T22:45:11+08:00">2019-05-24</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -514,86 +518,19 @@
 
       
         
-          
-            <h1 id="各个操作系统默认行尾字符格式"><a href="#各个操作系统默认行尾字符格式" class="headerlink" title="各个操作系统默认行尾字符格式"></a>各个操作系统默认行尾字符格式</h1><p>CR= Carriage Return= 回车= \r</p>
-<p>LF= Line Feed= 换行= \n</p>
-<p>Windows=CRLF=\n\r</p>
-<p>Unix系=LF=\n——包括linux&amp;mac</p>
-<p>某一次git add . ：</p>
+          <p>某一次git add . ：</p>
 <pre><code>$ git add .
 fatal: CRLF would be replaced by LF ...
-</code></pre><p>当我们在进行代码更新时，可能会因为不同操作系统的提交，或者一些设置问题，使得一个文件中含有多种不同的行尾字符符格式，从而影响整个git仓库。<br>一般git仓库中统一使用LF</p>
-<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><h2 id="一-修改编辑器和git配置"><a href="#一-修改编辑器和git配置" class="headerlink" title="一. 修改编辑器和git配置"></a>一. 修改编辑器和git配置</h2><ol>
-<li><p>先修改编辑器默认行尾字符格式</p>
-<p> 搜索eol（或行尾字符）将其改为 Unix and OS X，LF，\n其中之一</p>
-<p> 也可在项目文件夹根目录中加入文件 .editorconfig，详情见<a href="https://editorconfig.org/" target="_blank" rel="noopener">editorconfig官网</a></p>
-</li>
-<li><p>Git设置</p>
-<pre><code>git config --global core.autocrlf false
-git config --global core.safecrlf true
-</code></pre><p>注</p>
-</li>
-</ol>
-<p>AutoCRLF</p>
-<p>提交时转换为LF，检出时转换为CRLF</p>
-<pre><code>git config --global core.autocrlf true
-</code></pre><p> 提交时转换为LF，检出时不转换</p>
-<pre><code>git config --global core.autocrlf input
-</code></pre><p> 提交检出均不转换</p>
-<pre><code>git config --global core.autocrlf false
-</code></pre><p>SafeCRLF</p>
-<p>拒绝提交包含混合换行符的文件</p>
-<pre><code>git config --global core.safecrlf true
-</code></pre><p>允许提交包含混合换行符的文件</p>
-<pre><code>git config --global core.safecrlf false
-</code></pre><p>提交包含混合换行符的文件时给出警告</p>
-<pre><code>git config --global core.safecrlf warn
-</code></pre><p>常见一定是CRLF的文件：</p>
-<ol>
-<li>一些字体、图片文件，虽然是二进制文件，但是他们的格式可能是CRLF</li>
-<li>windows可执行文件bat</li>
-</ol>
-<p>（若项目中包含这些文件，使用git config –global core.autocrlf input可能会使图片或bat文件无法提交，所以建议git config –global core.autocrlf false和git config –global core.safecrlf true）</p>
-<h2 id="二-项目根目录创建gitattributes文件（但是好像很多项目中不用，可能拥有代码规范和审查吧）"><a href="#二-项目根目录创建gitattributes文件（但是好像很多项目中不用，可能拥有代码规范和审查吧）" class="headerlink" title="二. 项目根目录创建gitattributes文件（但是好像很多项目中不用，可能拥有代码规范和审查吧）"></a>二. 项目根目录创建gitattributes文件（但是好像很多项目中不用，可能拥有代码规范和审查吧）</h2><p>这个文件可以让通过git传输的文件格式按配置上传，拥有最高优先级。</p>
-<p><a href="https://github.com/alexkaratarakis/gitattributes" target="_blank" rel="noopener">这里</a>有常见的.gitattribute配置文件范本</p>
-<p>举例.gitattribute配置文件：</p>
-<pre><code># Set the default behavior, in case people don&apos;t have core.autocrlf set.
-* text=auto
-
-# Declare files that will always have LF line endings on checkout.
-*.sh text eol=lf
-
-# Declare files that will always have CRLF line endings on checkout.
-*.bat text eol=crlf
-
-# Denote all files that are truly binary and should not be modified.
-# img
-*.png binary
-*.jpg binary
-*.ico binary
-*.svg binary
-*.gif binary
-
-# font
-*.ttf binary
-*.eot binary
-*.woff binary
-*.otf binary
-*.woff2 binary
-
-# doc
-*.xlsx binary
-*.docx binary
-
-# media
-*.mp3 binary
-*.mp4 binary
-
-# data
-*.db binary
-*.dat binary
 </code></pre>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/24/git多平台行尾字符问题/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
         
 			      <div class="post-tags">
@@ -1216,15 +1153,15 @@ git config --global core.safecrlf true
                     </li>
                   
                     <li>
+                      <a href="/categories/编程相关/" title="编程相关">编程相关</a>
+                    </li>
+                  
+                    <li>
                       <a href="/categories/一些问题/" title="一些问题">一些问题</a>
                     </li>
                   
                     <li>
                       <a href="/categories/随想/" title="随想">随想</a>
-                    </li>
-                  
-                    <li>
-                      <a href="/categories/编程相关/" title="编程相关">编程相关</a>
                     </li>
                   
                 </ul>

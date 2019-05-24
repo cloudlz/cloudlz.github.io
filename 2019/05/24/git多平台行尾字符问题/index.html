@@ -108,18 +108,18 @@
   </script>
 
 
-  <meta name="description" content="各个操作系统默认行尾字符格式CR= Carriage Return= 回车= \r LF= Line Feed= 换行= \n Windows=CRLF=\n\r Unix系=LF=\n——包括linux&amp;amp;mac 某一次git add . ： $ git add . fatal: CRLF would be replaced by LF ... 当我们在进行代码更新时，可能会因为不同操作系">
+  <meta name="description" content="某一次git add . ： $ git add . fatal: CRLF would be replaced by LF ...">
 <meta name="keywords" content="git,行尾字符,CRLF,LF">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git多平台行尾字符问题">
 <meta property="og:url" content="https://cloudlz.github.io/2019/05/24/git多平台行尾字符问题/index.html">
 <meta property="og:site_name" content="cloudust的博客">
-<meta property="og:description" content="各个操作系统默认行尾字符格式CR= Carriage Return= 回车= \r LF= Line Feed= 换行= \n Windows=CRLF=\n\r Unix系=LF=\n——包括linux&amp;amp;mac 某一次git add . ： $ git add . fatal: CRLF would be replaced by LF ... 当我们在进行代码更新时，可能会因为不同操作系">
+<meta property="og:description" content="某一次git add . ： $ git add . fatal: CRLF would be replaced by LF ...">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-24T14:45:11.076Z">
+<meta property="og:updated_time" content="2019-05-24T14:51:37.883Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git多平台行尾字符问题">
-<meta name="twitter:description" content="各个操作系统默认行尾字符格式CR= Carriage Return= 回车= \r LF= Line Feed= 换行= \n Windows=CRLF=\n\r Unix系=LF=\n——包括linux&amp;amp;mac 某一次git add . ： $ git add . fatal: CRLF would be replaced by LF ... 当我们在进行代码更新时，可能会因为不同操作系">
+<meta name="twitter:description" content="某一次git add . ： $ git add . fatal: CRLF would be replaced by LF ...">
 
 
 
@@ -412,9 +412,13 @@
                 
               
 
-              <time title="创建时间：2019-05-24 22:45:11" itemprop="dateCreated datePublished" datetime="2019-05-24T22:45:11+08:00">2019-05-24</time>
+              <time title="创建时间：2019-05-24 22:45:11 / 修改时间：22:51:37" itemprop="dateCreated datePublished" datetime="2019-05-24T22:45:11+08:00">2019-05-24</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -500,14 +504,15 @@
       
 
       
-        <h1 id="各个操作系统默认行尾字符格式"><a href="#各个操作系统默认行尾字符格式" class="headerlink" title="各个操作系统默认行尾字符格式"></a>各个操作系统默认行尾字符格式</h1><p>CR= Carriage Return= 回车= \r</p>
+        <p>某一次git add . ：</p>
+<pre><code>$ git add .
+fatal: CRLF would be replaced by LF ...
+</code></pre><a id="more"></a>
+<h1 id="各个操作系统默认行尾字符格式"><a href="#各个操作系统默认行尾字符格式" class="headerlink" title="各个操作系统默认行尾字符格式"></a>各个操作系统默认行尾字符格式</h1><p>CR= Carriage Return= 回车= \r</p>
 <p>LF= Line Feed= 换行= \n</p>
 <p>Windows=CRLF=\n\r</p>
 <p>Unix系=LF=\n——包括linux&amp;mac</p>
-<p>某一次git add . ：</p>
-<pre><code>$ git add .
-fatal: CRLF would be replaced by LF ...
-</code></pre><p>当我们在进行代码更新时，可能会因为不同操作系统的提交，或者一些设置问题，使得一个文件中含有多种不同的行尾字符符格式，从而影响整个git仓库。<br>一般git仓库中统一使用LF</p>
+<p>当我们在进行代码更新时，可能会因为不同操作系统的提交，或者一些设置问题，使得一个文件中含有多种不同的行尾字符符格式，从而影响整个git仓库。<br>一般git仓库中统一使用LF</p>
 <h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><h2 id="一-修改编辑器和git配置"><a href="#一-修改编辑器和git配置" class="headerlink" title="一. 修改编辑器和git配置"></a>一. 修改编辑器和git配置</h2><ol>
 <li><p>先修改编辑器默认行尾字符格式</p>
 <p> 搜索eol（或行尾字符）将其改为 Unix and OS X，LF，\n其中之一</p>
@@ -516,18 +521,15 @@ fatal: CRLF would be replaced by LF ...
 <li><p>Git设置</p>
 <pre><code>git config --global core.autocrlf false
 git config --global core.safecrlf true
-</code></pre><p>注</p>
-</li>
+</code></pre></li>
 </ol>
-<p>AutoCRLF</p>
-<p>提交时转换为LF，检出时转换为CRLF</p>
+<h3 id="注"><a href="#注" class="headerlink" title="注"></a>注</h3><h3 id="AutoCRLF"><a href="#AutoCRLF" class="headerlink" title="AutoCRLF"></a>AutoCRLF</h3><p>提交时转换为LF，检出时转换为CRLF</p>
 <pre><code>git config --global core.autocrlf true
 </code></pre><p> 提交时转换为LF，检出时不转换</p>
 <pre><code>git config --global core.autocrlf input
 </code></pre><p> 提交检出均不转换</p>
 <pre><code>git config --global core.autocrlf false
-</code></pre><p>SafeCRLF</p>
-<p>拒绝提交包含混合换行符的文件</p>
+</code></pre><h3 id="SafeCRLF"><a href="#SafeCRLF" class="headerlink" title="SafeCRLF"></a>SafeCRLF</h3><p>拒绝提交包含混合换行符的文件</p>
 <pre><code>git config --global core.safecrlf true
 </code></pre><p>允许提交包含混合换行符的文件</p>
 <pre><code>git config --global core.safecrlf false
@@ -798,15 +800,15 @@ git config --global core.safecrlf true
                     </li>
                   
                     <li>
+                      <a href="/categories/编程相关/" title="编程相关">编程相关</a>
+                    </li>
+                  
+                    <li>
                       <a href="/categories/一些问题/" title="一些问题">一些问题</a>
                     </li>
                   
                     <li>
                       <a href="/categories/随想/" title="随想">随想</a>
-                    </li>
-                  
-                    <li>
-                      <a href="/categories/编程相关/" title="编程相关">编程相关</a>
                     </li>
                   
                 </ul>
@@ -834,7 +836,7 @@ git config --global core.safecrlf true
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#各个操作系统默认行尾字符格式"><span class="nav-number">1.</span> <span class="nav-text">各个操作系统默认行尾字符格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决办法"><span class="nav-number">2.</span> <span class="nav-text">解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-修改编辑器和git配置"><span class="nav-number">2.1.</span> <span class="nav-text">一. 修改编辑器和git配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-项目根目录创建gitattributes文件（但是好像很多项目中不用，可能拥有代码规范和审查吧）"><span class="nav-number">2.2.</span> <span class="nav-text">二. 项目根目录创建gitattributes文件（但是好像很多项目中不用，可能拥有代码规范和审查吧）</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#各个操作系统默认行尾字符格式"><span class="nav-number">1.</span> <span class="nav-text">各个操作系统默认行尾字符格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决办法"><span class="nav-number">2.</span> <span class="nav-text">解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-修改编辑器和git配置"><span class="nav-number">2.1.</span> <span class="nav-text">一. 修改编辑器和git配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注"><span class="nav-number">2.1.1.</span> <span class="nav-text">注</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AutoCRLF"><span class="nav-number">2.1.2.</span> <span class="nav-text">AutoCRLF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SafeCRLF"><span class="nav-number">2.1.3.</span> <span class="nav-text">SafeCRLF</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-项目根目录创建gitattributes文件（但是好像很多项目中不用，可能拥有代码规范和审查吧）"><span class="nav-number">2.2.</span> <span class="nav-text">二. 项目根目录创建gitattributes文件（但是好像很多项目中不用，可能拥有代码规范和审查吧）</span></a></li></ol></li></ol></div>
             
 
           </div>
