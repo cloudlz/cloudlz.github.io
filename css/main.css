@@ -462,7 +462,6 @@ td {
     padding: 8px 0 !important;
     margin-top: initial !important;
   }
-  .post-body h1,
   .post-body h2,
   .post-body h3,
   .post-body h4,
@@ -470,8 +469,6 @@ td {
   .post-body h6 {
     margin: 10px 18px 8px;
   }
-  .post-body .note h1,
-  .post-body .tabs .tab-content .tab-pane h1,
   .post-body .note h2,
   .post-body .tabs .tab-content .tab-pane h2,
   .post-body .note h3,
@@ -495,9 +492,6 @@ td {
     margin: 0 18px;
   }
   .post-body > span.exturl {
-    margin-left: 18px;
-  }
-  .post-body > div.post-button a {
     margin-left: 18px;
   }
   .post-body .note > p,
@@ -1610,7 +1604,7 @@ pre .javascript .function {
 }
 .posts-expand .post-tags {
   margin-top: 40px;
-  text-align: center;
+  text-align: left;
 }
 .posts-expand .post-tags a {
   display: inline-block;
@@ -1840,7 +1834,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffd5ff;
+  background: #cd95ec;
 }
 .feed-link,
 .chat {
@@ -3039,4 +3033,13 @@ ul.breadcrumb li+li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+body {
+  background: url("https://open.saintic.com/api/bingPic/");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+.content-wrap {
+  opacity: 0.86;
 }
